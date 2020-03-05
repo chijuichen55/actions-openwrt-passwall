@@ -9,17 +9,14 @@
 name: Build OpenWrt
 
 on:
-#  release:
-#    types: [published]
   push:
-    branches:
-      - dev-lean-lede
-    paths:
-      - '.config'
-  schedule:
-    - cron: 0 8 * * 5
-  watch:
-    types: [started]
+    branches: 
+      - master
+  #     ↑↑↑ 改成你的分支名, 一般是master
+  # schedule:
+  #   - cron: 0 20 * * *
+  # release:
+  #   types: [published]
 
 env:
   REPO_URL: https://github.com/Lienol/openwrt
